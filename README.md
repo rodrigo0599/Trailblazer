@@ -205,8 +205,9 @@ In the future, we think a major re-assessment of the code will be necessary in o
 
 ## Questions
 
-The GitHub profile name of Jonathan Maldonado is "jguemarez" and you can checkout his profile at: <https://www.github.com/jguemarez>.
-For further questions and comments, you can mail him to the following address: <cantor.dedekind112358@gmail.com>.
+If you have any questions or suggestions about this project, please feel free to contact me:
+- GitHub: [@rodrigo0599](https://github.com/rodrigo0599)
+- Email: rodrigo0599@hotmail.com
 
 ## License
 
