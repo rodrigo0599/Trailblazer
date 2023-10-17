@@ -1,0 +1,11 @@
+<div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+    <div class="card border-dark">
+        <div class="card-body">
+            <a class="text-info" href="/api/explorers/posts/{{id}}" class="card-link">See the Comments</a>
+            <a class="text-info"href="/api/explorers/posts/{{id}}/comment" class="card-link">Add a Comment</a>
+            {{#if isOwnPost}}
+            <a class="text-info" href="/api/dashboard/{{id}}/edit" class="card-link">Edit Your Post</a>
+            {{/if}}
+        </div>
+    </div>
+</div>

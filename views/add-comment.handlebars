@@ -1,0 +1,28 @@
+{{#if loggedIn}}
+<div class="container-fluid">
+  <div class="card-group row">
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card border-dark">
+        <div class="card-body text-dark">
+          <p>
+          <h3 class="card-title text-secondary">{{title}}</h3>
+          <span>Post #<h6 class="card-subtitle mb-2 text-muted">{{id}}</h6></span>
+          <span>Created by <strong class="text-warning">{{author_name}}</strong> on <em>{{format_date date_created}}</em></span>
+          </p>
+          <p class="card-text">{{content}}</p>
+          <form class="form signup-form">
+            <div class="form-group">
+              <label for="comment-area">Comment:</label>
+              <textarea class="form-input" type="text" id="comment-area"></textarea>
+            </div>
+            <button class="btn btn-success edit" id="add-comment">Add Comment</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {{>continue-voyage-partials}}
+  </div>
+</div>
+{{/if}}
+
+<script src="/scripts/add-comment.js"></script>

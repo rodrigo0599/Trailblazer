@@ -1,0 +1,44 @@
+{{#if loggedIn}}
+<div class="container-fluid">
+  <div class="card-group row">
+    <div class="col-sx-12 col-md-10 col-lg-8 m-auto">
+      <div class="card border-dark">
+        <div class="card-body">
+          {{#if title}}
+          <h5 class="card-title text-danger">Edit Post</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{id}}</h6>
+          <form class="form signup-form">
+            <div class="form-group">
+              <label for="post-title">Title</label>
+              <input class="form-input text-secondary" type="text" id="post-title" value="{{title}}" />
+            </div>
+            {{else}}
+            <h5 class="card-title text-danger">Edit Comment</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{id}}</h6>
+            <form class="form signup-form">
+              {{/if}}
+              <div class="form-group">
+                <label for="post-content">Content</label>
+                <textarea class="form-input" type="text" id="content">{{content}}</textarea>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-group row">
+    <div class="col-sx-12 col-md-10 col-lg-8 mx-auto">
+      <div class="card text-center border-dark">
+        <div class="card-body">
+          <button class="btn btn-secondary edit" id="update">Update </button>
+          <button class="btn btn-danger edit" id="delete">Delete </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-group row">
+    {{>continue-voyage-partials}}
+  </div>
+</div>
+</div>
+{{/if}}
+<script src="/scripts/edit.js"></script>

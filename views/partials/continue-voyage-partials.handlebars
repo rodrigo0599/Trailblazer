@@ -1,0 +1,53 @@
+<div class="col-sx-12 col-md-10 col-lg-8 m-auto">
+    {{#unless transparent}}
+    <div class="card text-secondary bg-light border-dark">
+        {{else}}
+        <div class="card text-secondary bg-transparent border-light">
+            {{/unless}}
+            {{#unless transparent}}
+            <div class="card-body d-flex flex-row justify-content-between">
+                <div class="p-2">
+                    <h3 class="card-title"><em>Continue your voyage through nature:</em></h3>
+                    <a class='text-info' href="/">Go Back to the Homepage</a></br>
+                    <a class='text-info' href="/api/dashboard">Go Back to your Dashboard</a></br>
+                    <a class='text-info' href="/api/explorers/search">Go Back to Search More Explorers</a></br>
+                    {{#if author_name}}
+                    <a class='text-info' href="/api/explorers/search/{{explorer_id}}/posts">Go Back to See More of
+                        {{author_name}}'s Posts</a>
+                    {{/if}}
+                </div>
+                <div class="p-2">
+                    <h3 class="card-title text-secondary"><em>See your trails/Search for them: </em></h3>
+                    <a class='text-success' href="/api/parks">Search On!</a></br>
+                    <a class='text-info' href="/api/parks/explorers/{{user_id}}/favorites">Favorites</a></br>
+                    <a class='text-info' href="/api/parks/explorers/{{user_id}}/visited">Been There</a></br>
+                    <a class='text-info' href="/api/parks/explorers/{{user_id}}/to_visit">Bucket List</a></br>
+                </div>
+            </div>
+        </div>
+        {{/unless}}
+        {{#if transparent}}
+        <div class="card-body d-flex flex-row justify-content-between">
+            <div class="p-2">
+                <h3 class="card-title text-light"><em>Continue your voyage through nature:</em></h3>
+                <a class='text-light' href="/">Go Back to the Homepage</a></br>
+                <a class='text-light' href="/api/dashboard">Go Back to your Dashboard</a></br>
+                <a class='text-light' href="/api/explorers/search">Go Back to Search More Explorers</a></br>
+            </div>
+            <div class="p-2">
+                <h3 class="card-title text-light"><em>See your trails/Search for them: </em></h3>
+                <a class='text-success' href="/api/parks">Search On!</a></br>
+                {{#unless favoriteParks}}
+                <a class='text-light' href="/api/parks/explorers/{{user_id}}/favorites">Favorites</a></br>
+                {{/unless}}
+                {{#unless visitedParks}}
+                <a class='text-light' href="/api/parks/explorers/{{user_id}}/visited">Been There</a></br>
+                {{/unless}}
+                {{#unless planToVisitParks}}
+                <a class='text-light' href="/api/parks/explorers/{{user_id}}/to_visit">Bucket List</a></br>
+                {{/unless}}
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

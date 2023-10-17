@@ -1,0 +1,29 @@
+{{#if loggedIn}}
+<div class="container-fluid">
+    <div class="card-group">
+         {{#if length}}
+        <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+            <div class="card border-dark">
+                <div class="card-body">
+                    <p>
+                    <h3 class="card-title"> Hello <span class="text-warning">{{username}}</span>!</h3>
+                    <em>Here are all of your fellow explorers. Click the links underneath in order to view the content they created:</em>
+                    </p>
+                    {{#each allExplorers as |explorer|}}
+                    {{>explorer-details-partials}}
+                    {{/each}}
+                    {{else}}
+                    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+                        <div class="card border-dark">
+                            <div class="card-body">
+                                <p>
+                                <h3 class="card-title"> Hello <span class="text-warning">{{username}}</span>!</h3>
+                                <em>Unfortunately, you are the only explorer thus far. Be sure to tell your friends about our website.</em>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                    {{>continue-voyage-partials}}
+                </div>
+            </div>
+            {{/if}}

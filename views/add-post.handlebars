@@ -1,0 +1,28 @@
+{{#if loggedIn}}
+<div class="container-fluid">
+  <div class="card-group row">
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card">
+        <div class="card-body">
+          <p>
+          <h3 class="card-title">Hello <span class="text-warning">{{username}}</span>! Go ahead and add a new post.</h3>
+          <form class="form signup-form" id="add-post">
+            <div class="form-group">
+              <label for="post-title">Title:</label>
+              <input class="form-input" type="text" id="post-title" />
+            </div>
+            <div class="form-group">
+              <label for="post-area">Content:</label>
+              <textarea class="form-input" type="text" id="post-area"></textarea>
+            </div class="card">
+            <button class="btn btn-success edit">Add Post</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {{>continue-voyage-partials}}
+  </div>
+</div>
+{{/if}}
+
+<script src="/scripts/add-post.js"></script>

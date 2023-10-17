@@ -1,0 +1,29 @@
+{{#if loggedIn}}
+<div class="container-fluid">
+    <div class="card-group row">
+        {{>post-details}}
+        {{#if comments}}
+        <div class="col-sx-12 col-md-10 col-lg-8 m-auto">
+            <div class="card">
+                <h3 class="card-title">Here are all of the comments for the selected post: </h3><hr>
+                <div class="card-body">
+                    {{#each comments as |comment|}}
+                    {{>comment-partials}}<hr>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-sx-12 col-md-10 col-lg-8 m-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">No comments for this post. Add one to join the conversation! </h3>
+                    <a class="text-info" href="/api/explorers/posts/{{id}}/comment">Add Comment</a>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{>continue-voyage-partials}}
+        {{/if}}
+    </div>
+</div>

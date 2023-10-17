@@ -1,0 +1,111 @@
+{{#if loggedIn}}
+<div class="container-fluid">
+    <div class="card-group row">
+        <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+            <div class="card border-dark">
+                <div class="card-body">
+                    <p>
+                    <h2 class="card-title text-warning">{{username}}</h2>
+                    Welcome to your dashboard, user # <large><strong>{{id}}</strong></large>!
+                    What do you want to do today?
+                    </p>
+                    <a class="text-info" href="/api/dashboard/post">Add a New Post</a><br />
+                    <a class="text-info" href="/api/dashboard/comments">See all of Your Comments</a><br />
+                    <a class="text-info" href="/api/explorers/posts">See all Posts Available</a><br>
+                    <a class="text-info" href="/api/explorers/search">Search Posts, Comments, and Parks Recommended or
+                        Visited by Fellow
+                        Explorers</a><br />
+                    <a class="text-info" href="/api/parks">Search for Parks</a><br />
+                    <a class="text-info" href="/api/parks/explorers/{{id}}/favorites">See Your Favorite Parks</a><br />
+                    <a class="text-info" href="/api/parks/explorers/{{id}}/visited">See Your Been-There List</a><br />
+                    <a class="text-info" href="/api/parks/explorers/{{id}}/to_visit">See Your Bucket List</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sx-12 col-md-10 col-lg-8 m-auto">
+            <div class="card border-dark text-center">
+                <div class="card-body">
+                    <h3 class="card-title">Here are all of your posts so far:</h3>
+                </div>
+            </div>
+        </div>
+        {{#if posts.length}}
+        {{#each posts as |post| }}
+        {{>post-details}}
+        {{>see-add-comment-partials}}
+        {{/each}}
+        {{else}}
+        <div class="col-sx-12 col-md-10 col-lg-8 m-auto">
+            <div class="card border-dark">
+                <div class="card-body">
+                    <h2 class="card-title">You haven't posted anything yet, <span
+                            class="text-warning">{{username}}</span>.
+                        Explore a trail and add a
+                        review/talk about your experience of it.</h2>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>
+{{/if}}
+{{#unless email}}
+<div class="col-sx-12 col-md-10 col-lg-8 m-auto">
+    <div class="card border-dark text-center">
+        <div class="card-body">
+            <h3 class="card-title">You are not in our mailing list, <span class="text-warning">{{username}}</span>.
+                Please, enter an email so we can keep you up to
+                date with nature-related activities!</h3>
+            <form class="form login-form">
+                <label class="text-dark" for="email">Email:<i><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                            <path
+                                d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z">
+                            </path>
+                        </svg></i></label>
+                <input type="email" class="form-control" id="email" placeholder="something@somewhere.com" name="email">
+                <button class="btn btn-success" type="submit">Subscribe to Mailing List</button>
+            </form>
+        </div>
+    </div>
+</div>
+{{else}}
+<div class="col-sx-12 col-md-10 col-lg-8 m-auto">
+    <div class="card border-dark text-center">
+        <div class="card-body">
+            <h3 class="card-title">You are already in our mailing list, <span class="text-warning">{{username}}!</span>
+            </h3>
+            <button class="btn btn-danger" type="button" id="noEmail">Unsubscribe from Mailing List</button>
+        </div>
+    </div>
+</div>
+{{/unless}}
+</div>
+</div>
+<div class="col-sx-12 col-md-10 col-lg-8 m-auto">
+    <div class="card border-dark text-center">
+        <div class="card-body">
+            <h3 class="card-title"> <span class="text-warning">{{username}}</span>: If for any reason, you decide its a
+                good idea to change your password, just fill this form:</h3>
+            <form class="form login-form" id="change-pw">
+                <label class="text-dark" for="pw"><i class='bx bxs-lock-alt'></i>New Password:</label>
+                <input type="password" class="form-control" id="pw" placeholder="#SecurePassword1234" name="password">
+                <label class="text-dark" for="confirm-pw"><i class='bx bxs-lock-alt'></i>Confirm New Password:</label>
+                <input type="password" class="form-control" id="confirm-pw" placeholder="#SecurePassword1234" name="confirm-pw">
+                <button class="btn btn-success" type="submit">Submit new password</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-sx-12 col-md-10 col-lg-8 m-auto">
+    <div class="card border-dark text-center">
+        <div class="card-body">
+            <h3 class="card-title"> You are a valued member of our community, <span
+                    class="text-warning">{{username}}.</span> However, we are not here to coerce anyone:</h3>
+            <button class="btn btn-danger" id="goodbye" type="button">Stop Being a Explorer</button>
+        </div>
+    </div>
+</div>
+
+<script src="/scripts/(un)subscribe.js"></script>
+<script src="/scripts/access.js"></script>

@@ -1,0 +1,17 @@
+<div class="card border-dark">
+    <div class="card-body">
+        <h4 class="card-subtitle">Explorer #{{id}}: <span class="text-warning">{{username}}</span> </h4>
+        <a class="text-info" href="/api/explorers/search/{{id}}/posts">See the posts by
+            {{username}}</a><br />
+        <a class="text-info" href="/api/explorers/search/{{id}}/comments">See the comments
+            by
+            {{username}}</a><br />
+        <a class="text-info" href="/api/parks/explorers/{{id}}/favorites">See the favorite
+            parks of {{username}}</a><br />
+        <a class="text-info" href="/api/parks/explorers/{{id}}/visited">See the parks
+            visited
+            by {{username}}</a><br />
+        <a class="text-info" href="/api/parks/explorers/{{id}}/to_visit">See the parks that
+            {{username}} wants to visit</a><br />
+    </div>
+</div>

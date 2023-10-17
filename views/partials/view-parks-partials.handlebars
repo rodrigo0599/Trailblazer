@@ -1,0 +1,19 @@
+<div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+  <div class="card bg-transparent border-light text-light" style="display: block;" data-favorite="{{explorer_park.is_favorite}}"
+    data-visited="{{explorer_park.has_visited}}" data-wants="{{explorer_park.wants_to_visit}}">
+    <div class="card-media-preview" data-card-id="{{id}}">
+      <div class="card-body text-center">
+        <figure>
+          <figcaption><a class="text-info h3" href="{{directions_url}}" target="_blank"><strong>{{full_name}}</strong></a>
+          </figcaption>
+          <img class="img-fluid" src="{{image_url}}" alt="{{image_altText}}" class="card-media-img"
+            style="max-height: 25vh;" />
+        </figure>
+        <h4>{{designation}}</h4>
+        {{#if ownParks}}
+        <button class="btn btn-danger" type="button" onclick="deleteCard(event)">Remove from the List</button>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

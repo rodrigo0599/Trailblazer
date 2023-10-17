@@ -1,0 +1,72 @@
+[
+  {
+    "park_id": 1,
+    "explorer_id": 1,
+    "is_favorite": true,
+    "has_visited": true
+  },
+  {
+    "park_id": 2,
+    "explorer_id": 1,
+    "has_visited": true
+  },
+  {
+
+    "park_id": 3,
+    "explorer_id": 1,
+    "wants_to_visit": true
+  },
+  {
+    "park_id": 1,
+    "explorer_id": 2,
+    "wants_to_visit": true
+  },
+  {
+    "park_id": 2,
+    "explorer_id": 2,
+    "is_favorite": true,
+    "has_visited": true
+  },
+  {
+
+    "park_id": 3,
+    "explorer_id": 2,
+    "has_visited": true
+  },
+
+  {
+    "park_id": 4,
+    "explorer_id": 3,
+    "has_visited": true
+  },
+  {
+    "park_id": 5,
+    "explorer_id": 3,
+    "is_favorite": true,
+    "has_visited": true
+  },
+  {
+
+    "park_id": 6,
+    "explorer_id": 3,
+    "wants_to_visit": true
+  },
+  {
+    "park_id": 4,
+    "explorer_id": 1,
+    "is_favorite": true,
+    "has_visited": true
+  },
+  {
+    "park_id": 5,
+    "explorer_id": 1,
+    "has_visited": true
+  },
+  {
+
+    "park_id": 6,
+    "explorer_id": 1,
+    "wants_to_visit": true
+  }
+
+]

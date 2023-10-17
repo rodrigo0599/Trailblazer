@@ -1,0 +1,161 @@
+{{#if loggedIn}}
+<div class="container-fluid">
+  <div class="card-group row">
+    {{#if favoriteParks}}
+    {{#if ownParks}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light">
+        <div class="card-body">
+          <h3 class="card-title">Here are your favorite parks, <span class="text-warning">{{username}}</span>!</h3>
+          <h6 class="card-subtitle">(Id: #{{id}})</h6>
+        </div>
+      </div>
+    </div>
+    {{#if length}}
+    {{#each favoriteParks as |park|}}
+    {{>view-parks-partials}}
+    {{/each}}
+    {{else}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light text-center" data-card-id="{{id}}">
+        <div class="card-body">
+          <h4 class="card-title text-light"><em>You still haven't added any parks to your favorites.
+            </em>
+            Click on the
+            link to find more trails: <a class="text-info" href='/api/parks/'>Search Parks</a></em></h4>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    {{else}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light" data-card-id="{{id}}">
+        <div class="card-body">
+          <h3 class="card-title">Here are the favorite parks of <span class="text-warning">{{fellow}}</span>:</h3>
+          <h6 class="card-subtitle">(Id: #{{id}})</h6>
+        </div>
+      </div>
+    </div>
+    {{#if length}}
+    {{#each favoriteParks as |park|}}
+    {{>view-parks-partials}}
+    {{/each}}
+    {{else}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light" data-card-id="{{id}}">
+        <div class="card-body">
+          <h4 class="card-title"><em><span class="text-warning">{{fellow}}</span> still has not added parks to his/her favorite list</em>
+          </h4>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    {{/if}}
+    {{/if}}
+
+    {{#if visitedParks}}
+    {{#if ownParks}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light" data-card-id="{{id}}">
+        <div class="card-body">
+          <h3 class="card-title">Here are the parks that you already visited, <span class="text-warning">{{username}}!</span></h3>
+          <h6 class="card-subtitle">(Id: #{{id}})</h6>
+        </div>
+      </div>
+    </div>
+    {{#if length}}
+    {{#each visitedParks as |park|}}
+    {{>view-parks-partials}}
+    {{/each}}
+    {{else}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light text-center" data-card-id="{{id}}">
+        <div class="card-body">
+          <h4 class="card-title"><em>You still haven't added any parks to your been-there list. Click
+              on the link to find more trails: <a class="text-info" href='/api/parks/'>Search Parks</a></em></h4>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    {{else}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light" data-card-id="{{id}}">
+        <div class="card-body">
+          <h3 class="card-title">Here are the parks that <span class="text-warning">{{fellow}}</span> has already visited:</h3>
+          <h6 class="card-subtitle">(Id: #{{id}})</h6>
+        </div>
+      </div>
+    </div>
+    {{#if length}}
+    {{#each visitedParks as |park|}}
+    {{>view-parks-partials}}
+    {{/each}}
+    {{else}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light" data-card-id="{{id}}">
+        <div class="card-body">
+          <h4 class="card-title"><em><span class="text-warning">{{fellow}}</span> still has not added parks to his/her been-there
+              list</em></h4>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    {{/if}}
+    {{/if}}
+
+    {{#if planToVisitParks}}
+    {{#if ownParks}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light" data-card-id="{{id}}">
+        <div class="card-body">
+          <h3 class="card-title">Here are the parks that you want to visit, <span class="text-warning">{{username}}!</span></h3>
+          <h6 class="card-subtitle">(Id: #{{id}})</h6>
+        </div>
+      </div>
+    </div>
+    {{#if length}}
+    {{#each planToVisitParks as |park|}}
+    {{>view-parks-partials}}
+    {{/each}}
+    {{else}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light text-center" data-card-id="{{id}}">
+        <div class="card-body">
+          <h4 class="card-title"><em>You still haven't added any parks to your bucket-list.
+              Click on
+              the link to find more trails: <a class="text-info" href='/api/parks/'>Search Parks</a></em></h4>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    {{else}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light" data-card-id="{{id}}">
+        <div class="card-body">
+          <h3 class="card-title">Here are the parks that <span class="text-warning">{{fellow}} </span> wants to visit:</h3>
+          <h6 class="card-subtitle">(Id: #{{id}})</h6>
+        </div>
+      </div>
+    </div>
+    {{#if length}}
+    {{#each planToVisitParks as |park|}}
+    {{>view-parks-partials}}
+    {{/each}}
+    {{else}}
+    <div class="col-xs-12 col-md-10 col-lg-8 m-auto">
+      <div class="card bg-transparent text-light border-light" data-card-id="{{id}}">
+        <div class="card-body">
+          <h4 class="card-title"><em><span class="text-warning">{{fellow}}</span> still has not added parks to his/her bucket list</em>
+          </h4>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    {{/if}}
+    {{/if}}
+  </div>
+</div>
+{{>continue-voyage-partials}}
+{{/if}}
+
+<script src="/scripts/search-parks.js"></script>

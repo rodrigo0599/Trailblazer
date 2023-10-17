@@ -1,0 +1,46 @@
+<div class="card-group row">
+    <div class="col-xs-12 col-md-8 col-lg-6">
+        <div class="modal bg-transparent border-light"
+            style=" display: block;" tabindex="-1" role="dialog"
+            {{#if actParks}} id="{{actId}}" {{else}} id="{{topicId}}" {{/if}}>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content bg-transparent text-light">
+                    <div class="modal-header">
+                        {{#if actParks}} <h5 class="modal-title text-dark" id="exampleModalLongTitle">Parks where you can perform
+                            your chosen activity:
+                            <strong><em>{{selectedActivity}}</em></strong>
+                        </h5>
+                        {{else}}
+                        <h5 class="modal-title text-dark" id="exampleModalLongTitle">Parks where you can learn about your chosen
+                            topic:
+                            <strong><em>{{selectedTopic}}</em></strong>
+                        </h5>
+                        {{/if}}
+                        <button type="button" class="close rounded-circle bg-transparent" data-dismiss="modal" aria-label="Close"
+                            onclick="closeModal()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {{#if actParks}}
+                        {{#each actParks as |park|}}
+                        <h5><a href="{{park.url}}" target="_blank">{{park.fullName}}</a></h5>
+                        <p>{{park.designation}}</p>
+                        {{/each}}
+                        {{/if}}
+                        {{#if topicParks}}
+                        {{#each topicParks as |park|}}
+                        <h5><a href="{{park.url}}" target="_blank">{{park.fullName}}</a></h5>
+                        <p>{{park.designation}}</p>
+                        {{/each}}
+                        {{/if}}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"
+                            onclick="closeModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

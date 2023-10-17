@@ -1,0 +1,30 @@
+{
+    "name": "trail-blazer",
+    "version": "1.0.0",
+    "description": "A cutting edge trail finding app. You just need a simple sign-up/login with a username and password to go to the members-only CMS blog.Else, you can enjoy the features available without membership.",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js",
+      "start:dev": "nodemon server.js",
+      "seed": "node seeds/index.js"
+    },
+    "author": "Jim Buckley, Jonathan Maldonado, Rodrigo Rivera, Maitree Patel",
+    "license": "MIT",
+    "dependencies": {
+      "bcrypt": "^5.0.0",
+      "connect-session-sequelize": "^7.0.4",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "express-handlebars": "^5.2.0",
+      "express-session": "^1.17.1",
+      "handlebars": "^4.7.6",
+      "mysql2": "^3.6.1",
+      "axios": "^1.5.1",
+      "validator": "^13.11.0"
+
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.7"
+    }
+  }

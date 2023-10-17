@@ -1,0 +1,197 @@
+{{#unless stateParks}}
+<div class="container-fluid">
+    <div class="card-group row" id="modal-row">
+        <div class="col-xs-12 col-md-6">
+            <div class="card border-light bg-transparent">
+                <div class="card-body">
+                    <h2 class="card-title" style="color: white;">Welcome to TrailBlazer!</h2>
+                    <h4 class="card-subtitle" style="color: lightgray;">A place where you can search for new outdoor
+                        escapades!
+                    </h4>
+                    <p style="color: darkgray;">Here you can find info about parks packed with nature-related
+                        activities
+                        and
+                        make your own park
+                        lists.
+                        If you join us, then you will be able to exchange posts and comments with fellow explorers.
+                        What
+                        do
+                        you
+                        want to do today?</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <div class="card border-light bg-transparent">
+                <div class="card-body">
+                    <form class="form login-form">
+                        <label for='state' style="color: gray;">Choose a State to Explore its Natural
+                            Resources</label>
+                        <input type='text' name='state' id='state' placeholder='Enter a State'>
+                        <button class="btn btn-success" type="submit">Start your Voyage</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-group row">
+        {{#each imageData as |image|}}
+        {{>image-details}}
+        {{/each}}
+    </div>
+</div>
+{{/unless}}
+{{#if stateParks}}
+<div class="container-fluid">
+    {{#unless actParks}}
+    {{#unless topicParks}}
+    {{#unless thingsToDo}}
+    <div class="card-group row">
+        <div class="col">
+            <div class="card border-light bg-transparent">
+                <div class="card-body">
+                    <h2 class="card-title" style="color: white;">Search for Parks!</h2>
+                    <h4 class="card-subtitle" style="color: lightgray;">We provide up-to-date information
+                        straight from the National Park Service database!
+                    </h4>
+                    <p style="display:block;" id="features">Features:
+                    <ul style="color: azure; display: block;" id="features-list">
+                        <li>The national parks chosen by state are filtered in order to only show-up parks where you can
+                            do hiking, biking, watersports, or camping!</li>
+                        <li>When you choose a park you can view the most important information for it in our site. If
+                            you wish, you can open a link to the park's official page.
+                        </li>
+                        <li>Once the modal containing info for the park open you can choose to see a list of officially
+                            recommended activities or you can add it to one of your lists!</li>
+                        <li>The three available categories for lists are: favorites, been-there, and bucket-list. The
+                            lists can be updated and retrieved at any time as long as the
+                            client-side storage is not full or has been erased.
+                        </li>
+                        <li>In addition, feel free to use the dropdown menus in order to search parks suitable for
+                            particular activities or representative of certain topics. </li>
+                        <li>If you sign-up, you will be able to do that and much more in our blog section, where you
+                            will be able to hang-out with fellow explorers and the info will be securely stored into our
+                            database!</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-group row">
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="card border-light bg-transparent">
+                <div class="card-body">
+                    <form class="form login-form">
+                        <label for='state' style="color: gray;">Choose a State to Explore its Natural
+                            Resources</label>
+                        <input type='text' name='state' id='state' placeholder={{state}}>
+                        <button class="btn btn-success" type="submit">Continue your Voyage</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="card border-light bg-transparent">
+                <div class="card-body">
+                    <div class="dropend">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown">
+                            {{state}} Parks
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {{#each stateParks as |park|}}
+                            <button id={{park.parkCode}} class="dropdown-item"
+                                onclick="getParkInfo(event)">{{park.fullName}}</button>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="card border-light bg-transparent">
+                <div class="card-body">
+                    <div class="dropend">
+                        <h5 style="color: darkgray;"><label for="activitiesBtn">Or, search for
+                                parks
+                                according to what you want to do: </label></h5>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="activitiesBtn"
+                            data-bs-toggle="dropdown" style="position: relative; top: 5vh;">
+                            Select an Activity
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {{#each activities as |act|}}
+                            <button id={{act.id}} class="dropdown-item"
+                                onclick="getParksByActivity(event)">{{act.name}}</button>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="card border-light bg-transparent">
+                <div class="card-body">
+                    <div class="dropstart">
+                        <h5 style="color: lightgray; background-color: transparent;"><label for="activitiesBtn">Or,
+                                search
+                                for parks
+                                according to topics of interest: </label></h5>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="activitiesBtn"
+                            data-bs-toggle="dropdown" style="position: relative; top: 5vh;">
+                            Select a Topic
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {{#each topics as |topic|}}
+                            <button id={{topic.id}} class="dropdown-item"
+                                onclick="getParksByTopic(event)">{{topic.name}}</button>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-group row">
+    <div class="card border-light bg-transparent">
+        <div class="card-body text-center">
+            <h3 class="card-title"></h3> <button class="btn btn-secondary" type="button" id="lists-btn">Click to see
+                your park lists!</button></h3>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" id="lists-container" style="display:none;">
+    <div class="row">
+        <div class="container col-xs-12 col-md-6 col-lg-4" id="container1">
+        </div>
+        <div class="container col-xs-12 col-md-6 col-lg-4" id="container2">
+        </div>
+        <div class="container col-xs-12 col-md-6 col-lg-4" id="container3">
+        </div>
+    </div>
+    {{/unless}}
+    {{/unless}}
+    {{/unless}}
+</div>
+
+
+{{#if thingsToDo}}
+{{>things-modal-partials}}
+{{/if}}
+{{#unless thingsToDo}}
+<script src="/scripts/search-parks.js"></script>
+<script src="/scripts/search-thingstodo.js"></script>
+{{/unless}}
+{{/if}}
+{{#if actParks}}
+{{>select-modal-partials}}
+{{/if}}
+{{#if topicParks}}
+{{>select-modal-partials}}
+{{/if}}
+<script src="/scripts/select-modal.js"></script>
+{{#unless thingsToDo}}
+<script src="/scripts/selectState.js"></script>
+{{/unless}}

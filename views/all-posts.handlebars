@@ -1,0 +1,12 @@
+<!-- Loop over each object in the posts array -->
+{{#if loggedIn}}
+<div class="container-fluid">
+    <div class="card-group row">
+        {{#each posts as |post| }}
+        {{>post-details}}
+        {{>see-add-comment-partials}}
+        {{/each}}
+        {{>continue-voyage-partials}}
+    </div>
+</div>
+{{/if}}

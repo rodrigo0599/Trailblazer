@@ -1,0 +1,45 @@
+[
+  {
+    "username": "Sal",
+    "password": "password12345"
+  },
+  {
+    "username": "Lernantino",
+    "password": "password12345"
+  },
+  {
+    "username": "Amiko",
+    "password": "password12345"
+  }
+  {
+    "username": "Lisa",
+    "password": "password12345"
+  }
+  {
+    "username": "Blake",
+    "password": "password12345"
+  }
+  {
+    "username": "Jim",
+    "password": "password12345"
+  }
+  {
+    "username": "Pam",
+    "password": "password12345"
+  }
+  {
+    "username": "Rodrigo",
+    "password": "password12345"
+  }
+  {
+    "username":"Maitree",
+    "password": "password12345"
+  }
+]
+
+
+
+
+
+9:21
+seed data for logins

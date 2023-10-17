@@ -1,0 +1,39 @@
+<div class="card-group row">
+  <div class="col-xs-12 col-md-8 col-lg-6">
+    <div class="modal bg-transparent border-light" style="display: block;" tabindex="-1" role="dialog" id="{{id}}">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-transparent text-light">
+          <div class="modal-header">
+            <h5 class="modal-title text-dark" id="exampleModalLongTitle">Things To Do at
+              <strong><em>{{selectedPark}}</em></strong></h5>
+            <button type="button" class="close rounded-circle bg-transparent" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            {{#each thingsToDo as |thing|}}
+            <h5><a class="text-info" href="{{thing.url}}" target="_blank">{{thing.title}}</a></h5>
+            <p>{{thing.shortDescription}}</p>
+            <figure>
+              <figcaption>{{thing.images.[0].caption}}</figcaption>
+              <img class="img-fluid rounded" src="{{thing.images.[0].url}}" style="max-height: 20vh;">
+            </figure>
+            <h5>Seasons in which the Activity is Performed: </h5>
+            <ul>
+              {{#each thing.season as |sea| }}
+              <li>{{sea}}</li>
+              {{/each}}
+            </ul>
+            <p><span><strong>Time of Day: {{thing.TimeOfDay}}</strong></span><br />
+              <span><strong>Duration: {{thing.Duration}}</strong></span>
+            </p>
+            {{/each}}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="closeModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

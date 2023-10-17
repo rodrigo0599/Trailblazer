@@ -1,0 +1,31 @@
+{{#if loggedIn}}
+<div class="container-fluid">
+    <div class="card-group row">
+        <div class="col-xs-12 col-md-10 col-lg-8 mx-auto">
+            <div class="card border-dark">
+                <div class="card-body">
+                    <h2 class="card-title">Here are all the posts by <span class="text-warning">{{explorer}}</span>:
+                    </h2>
+                </div>
+            </div>
+        </div>
+        {{#if allPosts.length}}
+        {{#each allPosts as |post|}}
+        {{>post-details}}
+        {{>see-add-comment-partials}}
+        {{/each}}
+        {{else}}
+        <div class="col-xs-12 col-md-10 col-lg-8 mx-auto">
+            <div class="card border-dark">
+                <div class="card-body">
+                    <p>
+                        <em>No posts added by <span class="text-warning">{{explorer}}</span> so far!</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{>continue-voyage-partials}}
+    </div>
+</div>
+{{/if}}

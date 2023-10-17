@@ -1,0 +1,26 @@
+{{#if loggedIn}}
+<div class="container-fluid">
+    <div class="card-group row">
+        <div class="col-xs-12 col-md-10 col-lg-8 mx-auto">
+            <div class="card border-dark">
+                <div class="card-body">
+                    <p>
+                    <h3 class="card-title"> Here are all of the comments by <span class="text-warning">{{explorer}}</span>:</h3><hr>
+                    </p>
+                    {{#if comments}}
+                    {{#each comments as |comment|}}
+                    {{>comment-partials}}
+                    <hr>
+                    {{/each}}
+                    {{else}}
+                    <p>
+                        <em>No comments added by {{explorer}} so far!</em>
+                    </p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{>continue-voyage-partials}}
+{{/if}}

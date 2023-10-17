@@ -1,0 +1,226 @@
+[
+  {
+    "full_name":  "Abraham Lincoln Birthplace National Historical Park",
+    "designation": "National Historical Park",
+    "directions_url": "http://www.nps.gov/abli/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C861078-1DD8-B71B-0B774A242EF6A706.jpg",
+    "image_altText":  "The Memorial Building surrounded by fall colors"
+  },
+  {
+    "full_name": "Acadia National Park",
+    "designation": "National Park",
+    "directions_url": "http://www.nps.gov/adam/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg",
+    "image_altText": "Large puffy clouds dot a brilliant blue sky as wave crash against the rocky coastline of Acadia."
+  },
+  {
+    "full_name": "Adams National Historical Park",
+    "designation": "National Historical Park",
+    "directions_url":"http://www.nps.gov/afam/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7C7416-1DD8-B71B-0B1B30D0827F7C74.jpg",
+    "image_altText":"The Birthplaces of Presidents John Adams (right) and John Quincy Adams (left)"
+  },
+  {
+    "full_name": "Bandelier National Monument",
+    "designation": "National Monument",
+    "directions_url": "http://www.nps.gov/band/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7D0B4C-1DD8-B71B-0B6F9B2B5B5F2F0A.jpg",
+    "image_altText": "A view of the cliff dwellings at Bandelier National Monument"
+  },
+ {
+    "full_name": "Big Hole National Battlefield",
+    "designation": "National Battlefield",
+    "directions_url": "http://www.nps.gov/biho/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7D2B5D-1DD8-B71B-0B2F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of the Big Hole National Battlefield"
+},
+{
+    "full_name": "Booker T Washington National Monument",
+    "designation":"National Battlefield",
+    "directions_url": "http://www.nps.gov/bowa/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7D4B7A-1DD8-B71B-0B4B1F1B4F2F2F0A.jpg",
+    "image_altText": "A view of the Booker T Washington National Monument"
+},
+{
+    "full_name": "Cabrillo National Monument",
+    "designation": "National Monument",
+    "directions_url": "http://www.nps.gov/cabr/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7D6B9C-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of the Cabrillo National Monument"
+},
+{
+    "full_name": "Cape Cod National Seashore",
+    "designation": "National Seashore",
+    "directions_url": "http://www.nps.gov/caco/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7D8BBA-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of the Cape Cod National Seashore"
+},
+{
+    "full_name": "Cape Hatteras National Seashore",
+    "designation": "National Seashore",
+    "directions_url": "http://www.nps.gov/caha/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7DABD8-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of the Cape Hatteras National Seashore"
+},
+{
+    "full_name": "Cape Lookout National Seashore",
+    "designation": "National Seashore",
+    "directions_url": "http://www.nps.gov/calo/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7DCBF6-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of the Cape Lookout National Seashore"
+},
+{
+    "full_name": "Channel Islands National Park",
+    "designation":"National Seashore",
+    "directions_url": "http://www.nps.gov/chis/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7DEB14-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of the Channel Islands National Park"
+},
+{
+    "full_name": "Chesapeake and Ohio Canal National Historical Park",
+    "designation": "National Historical Park",
+    "directions_url": "http://www.nps.gov/choh/planyourvisit/directions.htm",
+    "image_url":"https://www.nps.gov/common/uploads/structured_data/3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg",
+    "image_altText": "A view of the Chesapeake and Ohio Canal National Historical Park"
+},
+{
+    "full_name": "Chickasaw National Recreation Area",
+    "designation": "National Recreation Area",
+    "directions_url": "http://www.nps.gov/chic/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7E0B32-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of the Chickasaw National Recreation Area"
+},
+{
+    "full_name": "Crater Lake National Park",
+    "designation":"National Park",
+    "directions_url": "http://www.nps.gov/crla/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7E2B4F-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of the Crater Lake National Park"
+},
+{
+    "full_name": "Craters of the Moon National Monument & Preserve",
+    "designation": "National Monument & Preserve",
+    "directions_url": "http://www.nps.gov/crmo/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7E4B6C-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText":"A view of the Craters of the Moon National Monument & Preserve"
+},
+{
+    "full_name": "Cowpens National Battlefield",
+    "designation": "National Battlefield",
+    "directions_url": "http://www.nps.gov/cowp/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7E6B8A-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText":"A view of the Cowpens National Battlefield"
+},
+{
+    "full_name": "Crater Lake National Park",
+    "designation": "National Park",
+    "directions_url": "http://www.nps.gov/crla/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7E2B4F-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of the Crater Lake National Park"
+},
+{
+    "full_name": "Cuyahoga Valley National Park",
+    "designation": "National Park",
+    "directions_url": "http://www.nps.gov/cuva/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7E8BA8-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText":"A view of the Cuyahoga Valley National Park"
+},
+{
+    "full_name": "Death Valley National Park",
+    "designation": "National Park",
+    "directions_url": "http://www.nps.gov/deva/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7EABCA-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText":"A view of the Death Valley National Park"
+},
+{
+    "full_name": "Dry Tortugas National Park",
+    "designation": "National Park",
+    "directions_url": "http://www.nps.gov/drto/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7ECCD8-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText":"A view of the Dry Tortugas National Park"
+},
+{
+    "full_name": "El Malpais National Monument",
+    "designation":"National Battlefield",
+    "directions_url": "http://www.nps.gov/elma/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7EEEFA-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText":"A view of the El Malpais National Monument"
+},
+{
+    "full_name": "El Morro National Monument",
+    "designation": "National Monument",
+    "directions_url": "http://www.nps.gov/elmo/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7F0F18-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText":"A view of the El Morro National Monument"
+},
+{
+    "full_name": "Everglades National Park",
+    "designation": "National Park",
+    "directions_url": "http://www.nps.gov/ever/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7F2F36-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText":"A view of the Everglades National Park"
+},
+{
+    "full_name": "Fort Donelson National Battlefield",
+    "designation": "National Battlefield",
+    "directions_url": "http://www.nps.gov/fodo/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7F4F54-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText":"A view of the Fort Donelson National Battlefield"
+},
+{
+    "full_name": "Fort Frederica National Monument",
+    "designation": "National Monument",
+    "directions_url": "http://www.nps.gov/fofr/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7F6F72-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText":"A view of the Fort Frederica National Monument"
+},
+{
+    "full_name": "Fort Caroline National Memorial",
+    "designation": "National Memorial",
+    "directions_url": "http://www.nps.gov/foca/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7F8F90-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of the Fort Caroline National Memorial"
+},
+{
+    "full_name": "Fort Hill",
+    "designation": "National Memorial",
+    "directions_url": "http://www.nps.gov/fohi/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7FAFAE-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of Fort Hill"
+},
+{
+    "full_name": "Fort Stanwix National Monument",
+    "designation": "National Monument",
+    "directions_url": "http://www.nps.gov/fost/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7FCFCC-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of Fort Stanwix National Monument"
+},
+{
+    "full_name": "Fort Sumter National Monument",
+    "designation": "National Monument",
+    "directions_url": "http://www.nps.gov/fosu/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7FEFEA-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of Fort Sumter National Monument"
+},
+{
+    "full_name": "Fort Union National Monument",
+    "designation": "National Monument",
+    "directions_url": "http://www.nps.gov/foun/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C800008-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of Fort Union National Monument"
+},
+{
+  "full_name": "Sandy Hook National Recreation Area",
+  "designation": "National Recreation Area",
+  "directions_url": "http://www.nps.gov/gate/planyourvisit/directions.htm",
+  "image_url": "https://www.nps.gov/common/uploads/structured_data/3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg",
+  "image_altText": "A view of the Sandy Hook National Recreation Area"
+},
+{
+    "full_name": "Fort Pulaski National Monument",
+    "designation": "National Monument",
+    "directions_url": "http://www.nps.gov/fopu/planyourvisit/directions.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/3C800008-1DD8-B71B-0B5F3F4F2F3F2F0A.jpg",
+    "image_altText": "A view of Fort Pulaski National Monument"
+}
+]
